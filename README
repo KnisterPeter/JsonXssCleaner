@@ -1,0 +1,13 @@
+JSON parser wich cleans strings from XSS hacks (means tags, quotes...).
+
+Example:
+Input: \u003Cscript type=\\\"text/javascript\\\">alert(\\\"FAILED\\\");\u003C/script>
+Output: &lt;script type=&quot;text/javascript&quot;&gt;alert(&quot;FAILED&quot;);&lt;/script&gt;
+
+Prepare:
+
+npm install pegjs
+
+Build:
+
+pegjs -e JsonXssCleaner JsonXssCleaner.pegjs

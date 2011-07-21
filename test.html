@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+  <script src="json2.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://documentcloud.github.com/underscore/underscore-min.js" type="text/javascript"></script>
+  <!-- <script src="peg.js" type="text/javascript"></script> -->
+  <script src="JsonXssCleaner.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    //$.get('JsonXssCleaner.pegjs?t=' + (new Date().getTime()), function(data) {
+      //var parser = PEG.buildParser(data);
+      var parser = JsonXssCleaner;
+      
+      var obj = "{\"key\":\"&#34;   &#x3c;   &# 0000102    `\u003Cscript type=\\\"text/javascript\\\">alert(\\\"FAILED\\\");\u003C/script>\"}";
+      
+      var parsed = JSON.parse(obj);
+      //console.log("JSON", obj, parsed);
+      
+      var res = parser.parse(obj);
+      console.log("PEG", obj, res);
+      console.log("PEG", JSON.parse(res));
+      
+      $('body').append(JSON.parse(res).key);
+
+      
+      parser.parse("true");
+      parser.parse("false");
+      parser.parse("null");
+      parser.parse("\"string\"");
+      parser.parse("[]");
+      parser.parse("{}");
+      parser.parse("0");
+      parser.parse("-0");
+      parser.parse("0.99");
+      parser.parse("1.0e-123");
+      parser.parse("\"asdf\"");
+    //});
+  </script>
+</body>
+</html>
