@@ -968,7 +968,7 @@ JsonXssCleaner = (function(){
                           pos = savedPos1;
                         }
                         var result6 = result7 !== null
-                          ? (function(c) { return '\\' + c })(result7[1])
+                          ? (function(c) { return '\\' + c.join('') })(result7[1])
                           : null;
                         if (result6 !== null) {
                           var result5 = result6;
@@ -1323,7 +1323,7 @@ JsonXssCleaner = (function(){
                             pos = savedPos1;
                           }
                           var result6 = result7 !== null
-                            ? (function(c) { return '\\' + c })(result7[1])
+                            ? (function(c) { return '\\' + c.join('') })(result7[1])
                             : null;
                           if (result6 !== null) {
                             var result5 = result6;

@@ -35,7 +35,7 @@ string
       / ("'" / "\u0027") { return "&apos;" }
       / ("`" / "\u0060") { return "&#96;" }
       / ("\\\"" / "\\\u0022") { return "&quot;" }
-      / ("\\" c:('\\' / '/' / 'b' / 'f' / 'n' / 'r' / 't' / 'u' hex hex hex hex) { return '\\' + c })
+      / ("\\" c:('\\' / '/' / 'b' / 'f' / 'n' / 'r' / 't' / 'u' hex hex hex hex) { return '\\' + c.join('') })
     )*
     '"'
     { return '"' + chars.join('') + '"' }
