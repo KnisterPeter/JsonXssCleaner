@@ -24,6 +24,10 @@
       $('body').append(JSON.parse(res).key);
 
       
+      parser.parse("\t");
+      parser.parse("\n");
+      parser.parse("\u00RT");
+      parser.parse("\u00ef");
       parser.parse("true");
       parser.parse("false");
       parser.parse("null");
