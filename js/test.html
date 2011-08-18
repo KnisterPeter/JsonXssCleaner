@@ -12,7 +12,7 @@
       //var parser = PEG.buildParser(data);
       var parser = JsonXssCleaner;
       
-      var obj = "{\"key\":\"&#34;   &#x3c;   &# 0000102    `\u003Cscript type=\\\"text/javascript\\\">alert(\\\"FAILED\\\");\u003C/script>\"}";
+      var obj = "{\"key\":\"&#34; < \\u003C  &#x3c;   &# 0000102    `\u003Cscript type=\\\"text/javascript\\\">alert(\\\"FAILED\\\");\u003C/script>\"}";
       
       var parsed = JSON.parse(obj);
       //console.log("JSON", obj, parsed);
@@ -21,8 +21,8 @@
       console.log("PEG", obj, res);
       console.log("PEG", JSON.parse(res));
       
-      $('body').append(JSON.parse(res).key);
-
+        $('body').append(JSON.parse(res).key);
+      /*
       
       parser.parse("\t");
       parser.parse("\n");
@@ -39,6 +39,7 @@
       parser.parse("0.99");
       parser.parse("1.0e-123");
       parser.parse("\"asdf\"");
+      */
     //});
   </script>
 </body>
