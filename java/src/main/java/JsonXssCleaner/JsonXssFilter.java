@@ -13,7 +13,7 @@ import org.parboiled.parserunners.RecoveringParseRunner;
 import org.parboiled.support.ParsingResult;
 
 @BuildParseTree
-class JsonXssFilter extends BaseParser<Object> {
+public class JsonXssFilter extends BaseParser<Object> {
   // the root rule
   Rule Json() {
     // PUSH 1<AstNode>
