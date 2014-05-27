@@ -15,9 +15,9 @@
 	<description>the Java Implementation of the JsonXssCleaner</description>
   
 	<scm>
-		<connection>scm:git:git@github.com:/JsonXssCleaner.git</connection>
-		<url>scm:git:git@github.com:mmabelsabels/JsonXssCleaner.git</url>
-		<developerConnection>scm:git:git@github.com:mabels/JsonXssCleaner.git</developerConnection>
+		<url>https://github.com/KnisterPeter/JsonXssCleaner</url>
+		<connection>scm:git:git@github.com:KnisterPeter/JsonXssCleaner.git</connection>
+		<developerConnection>scm:git:git@github.com:KnisterPeter/JsonXssCleaner.git</developerConnection>
 	</scm>
 	<url>http://www.github.com/mabels/JsonXssCleaner.git</url>
 	<licenses>
