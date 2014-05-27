@@ -7,7 +7,7 @@
     <version>7</version>
   </parent>
   <groupId>de.matrixweb</groupId>
-	<artifactId>JsonXssCleaner</artifactId>
+  <artifactId>JsonXssCleaner</artifactId>
   <version>0.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
   
@@ -19,7 +19,7 @@
 		<connection>scm:git:git@github.com:KnisterPeter/JsonXssCleaner.git</connection>
 		<developerConnection>scm:git:git@github.com:KnisterPeter/JsonXssCleaner.git</developerConnection>
 	</scm>
-	<url>http://www.github.com/mabels/JsonXssCleaner.git</url>
+	<url>https://github.com/KnisterPeter/JsonXssCleaner</url>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -79,7 +79,6 @@
                     <execution>
                         <id>default</id>
                         <goals>
-                            <goal>prepare</goal>
                             <goal>perform</goal>
                         </goals>
                         <configuration>
@@ -91,3 +90,4 @@
 		</plugins>
 	</build>
 </project>
+
